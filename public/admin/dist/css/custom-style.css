@@ -1,0 +1,238 @@
+.sidebar-dark-primary .nav-sidebar > .nav-item > .nav-link.active,
+.sidebar-light-primary .nav-sidebar > .nav-item > .nav-link.active {
+    /* background-color: #484848 !important; */
+    background-image: radial-gradient(circle at 0 2%, #2c4a48, #1e6862 124%);
+}
+
+.sidebar-dark-primary .nav-sidebar > .nav-item > .nav-link.active:hover,
+.sidebar-light-primary .nav-sidebar > .nav-item > .nav-link.active:hover {
+    margin-left: 0px !important;
+}
+
+.sidebar-dark-primary .nav-sidebar > .nav-item > .nav-link:hover,
+.sidebar-light-primary .nav-sidebar > .nav-item > .nav-link:hover {
+    margin-left: 10px !important;
+    transition: 0.4s !important;
+}
+
+[class*="sidebar-dark-"] .nav-treeview > .nav-item > .nav-link:hover {
+    margin-left: 10px !important;
+    transition: 0.4s !important;
+}
+
+[class*="sidebar-dark-"] .nav-treeview > .nav-item > .nav-link.active:hover {
+    margin-left: 0px !important;
+    transition: 0s !important;
+}
+
+.main-sidebar {
+    background: #03413d !important;
+    color: #f6f6f6 !important;
+}
+
+label {
+    color: #555 !important;
+}
+
+input {
+    border-radius: 3px !important;
+    border: 1px solid #162031 !important;
+    height: 35px !important;
+}
+
+input:focus {
+    border: 0px !important;
+    transition: border 0.1s !important;
+}
+
+textarea {
+    border-radius: 5px !important;
+    border: 1px solid #162031 !important;
+}
+
+textarea:focus {
+    border: 0px !important;
+    transition: border 0.1s !important;
+}
+
+.btn-info-cs,
+.btn-danger {
+    background: linear-gradient(
+        355deg,
+        #2a3f54 -4%,
+        #162031,
+        #162031,
+        #162031 66%
+    ) !important;
+    color: #e6e6e6 !important;
+    border: none !important;
+}
+
+button.btn-info-cs,
+button.btn-danger {
+    background: linear-gradient(
+        355deg,
+        #2a3f54 -4%,
+        #162031,
+        #162031,
+        #162031 66%
+    ) !important;
+    color: #e6e6e6 !important;
+    border: none !important;
+}
+
+.btn-info-cs:hover {
+    background: linear-gradient(
+        355deg,
+        #27313a -4%,
+        #000000,
+        #000000,
+        #343434 66%
+    ) !important;
+    color: #fff !important;
+}
+
+button.btn-info-cs:hover {
+    background: linear-gradient(
+        355deg,
+        #27313a -4%,
+        #000000,
+        #000000,
+        #343434 66%
+    ) !important;
+    color: #fff !important;
+}
+
+.btn-primary,
+.edit {
+    background: linear-gradient(
+        355deg,
+        #2a3f54 -4%,
+        #162031,
+        #162031,
+        #162031 66%
+    ) !important;
+    border: none;
+}
+
+.btn-primary .edit:hover {
+    background: linear-gradient(
+        355deg,
+        #27313a -4%,
+        #000000,
+        #000000,
+        #343434 66%
+    ) !important;
+}
+
+.border-primary {
+    border: 1.5px solid #162031 !important;
+}
+
+.card-body {
+    border: 0px !important;
+}
+
+.page-item.active .page-link {
+    background-color: #343434 !important;
+    border-color: #343434 !important;
+}
+
+.page-item.active .page-link a:focus {
+    border: none !important;
+}
+
+input {
+    border-radius: 3px !important;
+    border: 1px solid #777 !important;
+    height: 40px !important;
+}
+
+div.dataTables_wrapper div.dataTables_filter label {
+    margin-right: 0px !important;
+}
+
+div.dataTables_wrapper div.dataTables_filter label {
+    margin-top: 8px !important;
+}
+
+div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+    margin-right: 0px !important;
+}
+
+div.dataTables_wrapper div.dataTables_info {
+    margin-left: 0px !important;
+}
+
+a {
+    color: var(--bs-link-color);
+    text-decoration: none !important;
+}
+
+div.dataTables_wrapper div.dataTables_filter input {
+    height: 30px !important;
+}
+
+div.dataTables_wrapper div.dataTables_length select {
+    width: auto;
+    display: inline-block;
+    width: 50% !important;
+}
+
+th,
+td,
+button,
+p,
+a,
+i,
+label {
+    font-size: 15px !important;
+}
+th,
+td,
+table {
+    border: 0 !important;
+}
+tr {
+    border-bottom: 1px solid #777 !important;
+}
+input[type="text"],
+input[type="file"],
+input[type="number"] {
+    border: 1px solid rgb(211, 211, 211) !important;
+    height: 35px !important;
+    color: #666 !important;
+}
+textarea {
+    border: 1px solid rgb(211, 211, 211) !important;
+    color: #666 !important;
+}
+
+#delete {
+    background: rgba(239, 72, 106, 0.3) !important;
+    color: rgba(239, 72, 106, 1) !important;
+    border-radius: 50%;
+}
+
+#deleteresource {
+    background: rgba(239, 72, 106, 0.3) !important;
+    color: rgba(239, 72, 106, 1) !important;
+    border-radius: 50%;
+}
+
+i {
+    font-size: 12px !important;
+}
+#view {
+    background: rgba(10, 187, 117, 0.15) !important;
+    color: rgba(10, 187, 117, 1) !important;
+    border-radius: 50%;
+}
+#edit {
+    background: rgba(247, 123, 11, 0.15) !important;
+    color: rgba(247, 123, 11, 1) !important;
+    border-radius: 50%;
+}
+.content-wrapper {
+    background: #e2f1f2 !important;
+}
