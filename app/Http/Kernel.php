@@ -63,17 +63,24 @@ class Kernel extends HttpKernel
         'precognitive' => \Illuminate\Foundation\Http\Middleware\HandlePrecognitiveRequests::class,
         'signed' => \App\Http\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
-        'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+        'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class, 
     ];
 
 
     protected $routeMiddleware = [
         // Other middleware
-    
-        'auth:admin' => \App\Http\Middleware\Authenticate::class,
-        'auth:manager' => \App\Http\Middleware\Authenticate::class,
-        'auth:employee' => \App\Http\Middleware\Authenticate::class,
-        'auth:customer' => \App\Http\Middleware\Authenticate::class,
+
+        // 'auth:admin' => \App\Http\Middleware\Authenticate::class,
+        // 'auth:manager' => \App\Http\Middleware\Authenticate::class,
+        // 'auth:employee' => \App\Http\Middleware\Authenticate::class,
+        // 'auth:customer' => \App\Http\Middleware\Authenticate::class,
+        
+        'auth:admin' => \App\Http\Middleware\Authenticate::class . ':admin',
+        'auth:manager' => \App\Http\Middleware\Authenticate::class . ':manager',
+        'auth:employee' => \App\Http\Middleware\Authenticate::class . ':employee',
+        'auth:customer' => \App\Http\Middleware\Authenticate::class . ':customer',
+        'auth:branch_manager' => \App\Http\Middleware\Authenticate::class . ':branch_manager',
+        'check.role' => \App\Http\Middleware\CheckRoleMiddleware::class,
     ];
     
 }
