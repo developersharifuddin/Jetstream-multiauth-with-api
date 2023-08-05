@@ -36,14 +36,16 @@ class Kernel extends HttpKernel
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
+            \App\Http\Middleware\CheckAdmin::class,
         ],
 
         'api' => [
             // \Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
-            \Illuminate\Routing\Middleware\ThrottleRequests::class.':api',
+            \Illuminate\Routing\Middleware\ThrottleRequests::class . ':api',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
     ];
+
 
     /**
      * The application's middleware aliases.
@@ -63,24 +65,19 @@ class Kernel extends HttpKernel
         'precognitive' => \Illuminate\Foundation\Http\Middleware\HandlePrecognitiveRequests::class,
         'signed' => \App\Http\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
-        'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class, 
+        'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
     ];
 
 
     protected $routeMiddleware = [
-        // Other middleware
+        // // Other middleware entries...  
+        // 'role:admin' => \App\Http\Middleware\CheckAdmin::class,
+        // 'role:manager' => \App\Http\Middleware\CheckManager::class,
+        // 'role:employee' => \App\Http\Middleware\CheckEmployee::class,
+        // 'auth.role' => \App\Http\Middleware\AuthRoleMiddleware::class,
 
-        // 'auth:admin' => \App\Http\Middleware\Authenticate::class,
-        // 'auth:manager' => \App\Http\Middleware\Authenticate::class,
-        // 'auth:employee' => \App\Http\Middleware\Authenticate::class,
-        // 'auth:customer' => \App\Http\Middleware\Authenticate::class,
-        
-        'auth:admin' => \App\Http\Middleware\Authenticate::class . ':admin',
-        'auth:manager' => \App\Http\Middleware\Authenticate::class . ':manager',
-        'auth:employee' => \App\Http\Middleware\Authenticate::class . ':employee',
-        'auth:customer' => \App\Http\Middleware\Authenticate::class . ':customer',
-        'auth:branch_manager' => \App\Http\Middleware\Authenticate::class . ':branch_manager',
-        'check.role' => \App\Http\Middleware\CheckRoleMiddleware::class,
+        'auth:admin' => \App\Http\Middleware\CheckAdmin::class . ':admin',
+        'auth:manager' => \App\Http\Middleware\CheckManager::class . ':manager',
+        'auth:employee' => \App\Http\Middleware\CheckEmployee::class . ':employee',
     ];
-    
 }

@@ -11,7 +11,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable
+class User extends Authenticatable implements MustVerifyEmail
 {
     use HasApiTokens;
     use HasFactory;
@@ -26,10 +26,7 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
-        'email',
-        'password',
-        'role',
+        'name', 'email', 'password',
     ];
 
     /**
@@ -62,41 +59,9 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
 
-    // protected $guarded = [];
-
-    // protected function getGuarded()
-    // {
-    //     return [];
-    // }
-
-
-    protected $guard = ['admin','manager', 'employee','customer'];
-    
-    public function employee()
-    {
-        return $this->hasOne(Employee::class, 'user_id', 'id');
-    }
-
-    public function branch()
-    {
-        return $this->belongsTo(CollectionHub::class,'branch_id', 'id');
-    }
 
     public function admin()
     {
-        return $this->hasOne(Admin::class);
+        return $this->role === 'admin';
     }
-
-    public function manager()
-    {
-        return $this->hasOne(Manager::class);
-    }
-  
-    public function branchManager()
-    {
-        return $this->hasOne(BranchManager::class);
-    }
-
-
-    
 }

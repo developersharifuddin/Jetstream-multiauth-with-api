@@ -13,6 +13,7 @@ return [
     |
     */
 
+
     'defaults' => [
         'guard' => 'web',
         'passwords' => 'users',
@@ -40,28 +41,7 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
-    
-        'admin' => [
-            'driver' => 'session',
-            'provider' => 'admins',
-        ],
-    
-        'manager' => [
-            'driver' => 'session',
-            'provider' => 'managers',
-        ],
-    
-        'employee' => [
-            'driver' => 'session',
-            'provider' => 'employees',
-        ],
-    
-        'customer' => [
-            'driver' => 'session',
-            'provider' => 'customers',
-        ],
     ],
-    
 
     /*
     |--------------------------------------------------------------------------
@@ -85,28 +65,6 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
         ],
-    
-        'admins' => [
-            'driver' => 'eloquent',
-            'model' => App\Models\Admin::class,
-        ],
-    
-        'managers' => [
-            'driver' => 'eloquent',
-            'model' => App\Models\Manager::class,
-        ],
-    
-        'employees' => [
-            'driver' => 'eloquent',
-            'model' => App\Models\Employee::class,
-        ],
-    
-        'customers' => [
-            'driver' => 'eloquent',
-            'model' => App\Models\Customer::class,
-        ],
-     
-    
 
         // 'users' => [
         //     'driver' => 'database',
@@ -134,42 +92,14 @@ return [
     */
 
     'passwords' => [
-        
         'users' => [
             'provider' => 'users',
             'table' => 'password_reset_tokens',
             'expire' => 60,
             'throttle' => 60,
         ],
-
-        'admins' => [
-            'provider' => 'admins',
-            'table' => 'password_resets',
-            'expire' => 60,
-            'throttle' => 60,
-        ],
-
-        'managers' => [
-            'provider' => 'publishers',
-            'table' => 'password_resets',
-            'expire' => 60,
-            'throttle' => 60,
-        ],
-
-        'employees' => [
-            'provider' => 'customers',
-            'table' => 'password_resets',
-            'expire' => 60,
-            'throttle' => 60,
-        ],
-
-        'customers' => [
-            'provider' => 'customers',
-            'table' => 'password_resets',
-            'expire' => 60,
-            'throttle' => 60,
-        ],
     ],
+
     /*
     |--------------------------------------------------------------------------
     | Password Confirmation Timeout
