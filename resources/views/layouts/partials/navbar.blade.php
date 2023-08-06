@@ -21,26 +21,12 @@
               </div>
           </li>
       </ul>
-      <ul class="navbar-nav py-1 mx-auto">
-          <li class="nav-item">
-              <div class="col-span-6">
-                  <div class="flex items-center mt-2 d-flex">
-                      <img class="w-12 h-12 rounded-full object-cover" height="45px" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}">
-                      <div class="ml-4 leading-tight">
-                          <div class="text-gray-900">{{ Auth::user()->name }}</div>
-                          <div class="text-gray-700 text-sm">{{ Auth::user()->email }}</div>
-                      </div>
-                  </div>
-              </div>
-          </li>
-      </ul>
+
 
       <!-- Right navbar links -->
-      <ul class="navbar-nav ml-auto">
-          <!-- Navbar Search -->
-
+      <ul class="navbar-nav ml-auto align-items-center">
           <!-- Messages Dropdown Menu -->
-          <li class="nav-item dropdown">
+          {{-- <li class="nav-item dropdown">
               <a class="nav-link" data-toggle="dropdown" href="#">
                   <i class="far fa-comments"></i>
                   <span class="badge badge-danger navbar-badge">3</span>
@@ -96,7 +82,7 @@
                   <div class="dropdown-divider"></div>
                   <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
               </div>
-          </li>
+          </li> --}}
           <!-- Notifications Dropdown Menu -->
           <li class="nav-item dropdown">
               <a class="nav-link" data-toggle="dropdown" href="#">
@@ -136,13 +122,17 @@
           </li>
 
           <div class="btn-group mr-3">
-              <button type="button" class="btn border dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+              <button type="button" class="btn border" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
                   @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
                   <img class="h-8 w-8 rounded-full object-cover" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
-
                   @else
-                  <span class="inline-flex rounded-md">
-                      {{ Auth::user()->name }}
+                  <span class="inline-flex rounded-md flex d-flex">
+                      <img class="w-12 h-12 rounded-full object-cover" height="45px" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}">
+                      <div class="ml-3 leading-tight">
+                          <div class="text-gray-900">{{ Auth::user()->name }}</div>
+                          <div class="text-gray-700 text-sm float-left">{{ Auth::user()->role }}</div>
+                      </div>
+                      <span class="fa fa-angle-down ml-4 my-auto"></span>
                   </span>
                   @endif
               </button>
@@ -160,7 +150,8 @@
                               {{ __('Profile') }}
                           </x-dropdown-link>
                       </button></li>
-                  <li><button class="dropdown-item px-auto" type="button">
+                  <li>
+                      <button class="dropdown-item px-auto" type="button">
                           <div class="border-top border-gray-200"></div>
                           @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
                           <x-dropdown-link href="{{ route('api-tokens.index') }}">
@@ -177,9 +168,10 @@
                           </form> --}}
                           <form action="{{ route('admin.logout') }}" method="POST">
                               @csrf
-                              <button class="btn btn-transparent border-none" type="submit">Logout</button>
+                              <button class="btn btn-transparent border-none ml-4" type="submit">Logout</button>
                           </form>
-                      </button></li>
+                      </button>
+                  </li>
               </ul>
           </div>
 
