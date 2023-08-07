@@ -5,8 +5,8 @@
           <li class="nav-item">
               <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
           </li>
-          <li class="nav-item d-none d-sm-inline-block h-4">
-              <a href="/" class="nav-link" target="_blank"><i class="fa-solid fa-earth-americas"></i></a>
+          <li class="nav-item d-none d-sm-inline-block">
+              <a href="/" class="nav-link goweb" target="_blank"><i class="fa-solid fa-earth-americas"></i></a>
           </li>
       </ul>
       <!-- Left navbar links -->
@@ -86,7 +86,7 @@
           <!-- Notifications Dropdown Menu -->
           <li class="nav-item dropdown">
               <a class="nav-link" data-toggle="dropdown" href="#">
-                  <i class="far fa-bell"></i>
+                  <i class="far fa-bell text-secoundary"></i>
                   <span class="badge badge-warning navbar-badge">15</span>
               </a>
               <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
@@ -112,12 +112,12 @@
           </li>
           <li class="nav-item">
               <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-                  <i class="fas fa-expand-arrows-alt"></i>
+                  <i class="fas fa-expand-arrows-alt text-secoundary"></i>
               </a>
           </li>
           <li class="nav-item">
               <a class="nav-link" data-widget="control-sidebar" data-controlsidebar-slide="true" href="#" role="button">
-                  <i class="fas fa-th-large"></i>
+                  <i class="fas fa-th-large text-secoundary"></i>
               </a>
           </li>
 

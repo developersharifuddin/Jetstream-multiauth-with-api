@@ -231,10 +231,15 @@ i {
 
 /**************** bg-color *****************/
 .content-wrapper {
+    background: transparent;
+}
+
+body {
     background: #dcebff !important;
 }
+
 .main-footer {
-    background: #dcebff !important;
+    background: transparent !important;
 }
 .main-footer {
     background-color: #fff;
@@ -316,9 +321,6 @@ input:focus {
 .main-header .nav-item {
     margin-right: 1.3rem !important;
 }
-.main-header .user {
-    left: -5rem;
-}
 
 [class*="sidebar-dark"] .btn-sidebar,
 [class*="sidebar-dark"] .form-control-sidebar {
@@ -360,4 +362,10 @@ a.btn {
     width: 32px !important;
     margin-right: 7px;
     /* border: 0.5px solid rgba(196, 196, 196, 0.5) !important; */
+}
+.goweb {
+    border-radius: 50%;
+    background: rgba(191, 225, 231, 0.5);
+    padding: 10px !important;
+    margin: 0 auto;
 }
