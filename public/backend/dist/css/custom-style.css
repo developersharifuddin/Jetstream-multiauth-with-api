@@ -397,3 +397,21 @@ tr:nth-child(even) {
 .card-header {
     padding: 18px;
 }
+
+a#view,#edit,#delete  {
+    box-shadow: 0.3px 1.5px 0.5px 0.6px #268b9b !important;
+    border-radius: 5px !important;
+    height: 28px !important;
+    width: 32px !important;
+    margin-right: 7px;
+    margin-bottom: 5px;
+}
+a#view {
+    box-shadow: 0.3px 1.5px 0.5px 0.6px rgba(10, 187, 117, .7) !important;
+}
+a#edit {
+    box-shadow: 0.3px 1.5px 0.5px 0.6px rgba(247, 123, 11, .7)  !important;
+}
+a#delete {
+    box-shadow: 0.3px 1.5px 0.5px 0.6px rgba(239, 72, 106, .7)  !important;
+}
