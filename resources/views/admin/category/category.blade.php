@@ -7,6 +7,7 @@
 @section('button') @endsection
 
 @section('content')
+<<<<<<< HEAD
     <div class="row">
         <div class="col-12">
             <div class="card">
@@ -158,6 +159,16 @@
                     </table>
                 </div>
                 <!-- /.card-body -->
+=======
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">DataTable with default features</h3>
+                <a link="#" class="btn btn-info shadow border-0">
+                    Add New
+                </a>
+>>>>>>> 3593f80dec059d9cf3c324b4eaf976165e1e3ab4
             </div>
             <!-- /.card -->
         </div>

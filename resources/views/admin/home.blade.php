@@ -6,6 +6,107 @@
 
 <!-- Small boxes (Stat box) -->
 <div class="row">
+    {{-- <div class="col-md-3">
+        <div class="card card-danger">
+            <div class="card-header">
+                <h3 class="card-title">Maximizable</h3>
+
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="maximize"><i class="fas fa-expand"></i>
+                    </button>
+                </div>
+                <!-- /.card-tools -->
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+                The body of the card
+            </div>
+            <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+    </div> --}}
+
+    <div class="col-lg-3 col-6">
+        <div class="info-box bg-info">
+            <span class="info-box-icon"><i class="far fa-bookmark"></i></span>
+
+            <div class="info-box-content">
+                <span class="info-box-text">Bookmarks</span>
+                <span class="info-box-number">41,410</span>
+
+                <div class="progress">
+                    <div class="progress-bar" style="width: 70%"></div>
+                </div>
+                <span class="progress-description">
+                    70% Increase in 30 Days
+                </span>
+            </div>
+            <!-- /.info-box-content -->
+        </div>
+        <!-- /.info-box -->
+    </div>
+    <!-- /.col -->
+    <div class="col-lg-3 col-6">
+        <div class="info-box bg-success">
+            <span class="info-box-icon"><i class="far fa-thumbs-up"></i></span>
+
+            <div class="info-box-content">
+                <span class="info-box-text">Likes</span>
+                <span class="info-box-number">41,410</span>
+
+                <div class="progress">
+                    <div class="progress-bar" style="width: 70%"></div>
+                </div>
+                <span class="progress-description">
+                    70% Increase in 30 Days
+                </span>
+            </div>
+            <!-- /.info-box-content -->
+        </div>
+        <!-- /.info-box -->
+    </div>
+    <!-- /.col -->
+    <div class="col-lg-3 col-6">
+        <div class="info-box bg-warning">
+            <span class="info-box-icon"><i class="far fa-calendar-alt"></i></span>
+
+            <div class="info-box-content">
+                <span class="info-box-text">Events</span>
+                <span class="info-box-number">41,410</span>
+
+                <div class="progress">
+                    <div class="progress-bar" style="width: 70%"></div>
+                </div>
+                <span class="progress-description">
+                    70% Increase in 30 Days
+                </span>
+            </div>
+            <!-- /.info-box-content -->
+        </div>
+        <!-- /.info-box -->
+    </div>
+    <!-- /.col -->
+    <div class="col-lg-3 col-6">
+        <div class="info-box bg-danger">
+            <span class="info-box-icon"><i class="fas fa-comments"></i></span>
+
+            <div class="info-box-content">
+                <span class="info-box-text">Comments</span>
+                <span class="info-box-number">41,410</span>
+
+                <div class="progress">
+                    <div class="progress-bar" style="width: 70%"></div>
+                </div>
+                <span class="progress-description">
+                    70% Increase in 30 Days
+                </span>
+            </div>
+            <!-- /.info-box-content -->
+        </div>
+        <!-- /.info-box -->
+    </div>
+    <!-- /.col -->
+
     <div class="col-lg-3 col-6">
         <!-- small box -->
         <div class="small-box bg-info">
