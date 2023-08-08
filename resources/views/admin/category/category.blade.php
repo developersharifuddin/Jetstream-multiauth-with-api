@@ -37,7 +37,7 @@
                                     <a link="#" class="btn btn-primary btn-sm edit text-light border-0 edit"
                                         rel="tooltip" id="edit" title="Edit" data-id="4" data-bs-toggle="modal"
                                         data-bs-target="#edit_modal" data-bs-whatever="@mdo">
-                                        <i class="fas fa-pencil-alt"></i>
+                                        <i class="fa-regular fa-pen-to-square"></i>
                                     </a>
                                     <a href="" class="btn btn-info btn-sm text-light view border-0 view"
                                         id="view" rel="tooltip" title="view" data-id="4" data-bs-toggle="modal"

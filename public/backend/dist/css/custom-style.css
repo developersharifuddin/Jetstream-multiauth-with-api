@@ -409,9 +409,32 @@ a#view,#edit,#delete  {
 a#view {
     box-shadow: 0.3px 1.5px 0.5px 0.6px rgba(10, 187, 117, .7) !important;
 }
+a#view:hover {
+    box-shadow: 0.3px 1.5px 2px 0.6px rgb(4, 125, 77) !important;
+    background:  rgba(10, 187, 117) !important;
+    color: rgb(255, 255, 255) !important;
+    font-weight: 800 !important;
+}
 a#edit {
     box-shadow: 0.3px 1.5px 0.5px 0.6px rgba(247, 123, 11, .7)  !important;
 }
+a#edit:hover {
+    box-shadow: 0.3px 1.5px 2px 0.6px rgb(196, 105, 1) !important;
+    background:  rgba(247, 123, 11) !important;
+    color: rgb(255, 255, 255) !important;
+    font-weight: 800 !important;
+}
+
 a#delete {
     box-shadow: 0.3px 1.5px 0.5px 0.6px rgba(239, 72, 106, .7)  !important;
 }
+a#delete:hover {
+    box-shadow: 0.3px 1.5px 2px 0.6px rgb(170, 36, 63) !important;
+    background:  rgba(239, 72, 106) !important;
+    color: rgb(255, 255, 255) !important;
+    font-weight: 800 !important;
+}
+
+
+
+
