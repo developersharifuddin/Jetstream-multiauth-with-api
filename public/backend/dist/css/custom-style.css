@@ -356,12 +356,22 @@ body {
 
 /* button style */
 a.btn {
-    box-shadow: 0.3px 1.5px 0.5px 0.6px#268b9b !important;
+    box-shadow: 0.3px 1.5px 0.5px 0.6px #268b9b !important;
     border-radius: 5px !important;
     height: 28px !important;
     width: 32px !important;
     margin-right: 7px;
+    margin-bottom: 5px;
     /* border: 0.5px solid rgba(196, 196, 196, 0.5) !important; */
+}
+a.btn-info {
+    box-shadow: 0.3px 1.5px 0.5px 0.6px rgba(10, 187, 117, .7) !important;
+}
+a.btn-primary {
+    box-shadow: 0.3px 1.5px 0.5px 0.6px rgba(247, 123, 11, .7)  !important;
+}
+a.btn-danger {
+    box-shadow: 0.3px 1.5px 0.5px 0.6px rgba(239, 72, 106, .7)  !important;
 }
 .goweb {
     border-radius: 50%;
