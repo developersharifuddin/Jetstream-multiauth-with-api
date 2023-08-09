@@ -29,11 +29,11 @@ label {
     color: #555 !important;
 }
 
-input {
+/* input {
     border-radius: 3px !important;
     border: 1px solid #162031 !important;
     height: 35px !important;
-}
+} */
 
 input:focus {
     border: 0px !important;
@@ -137,11 +137,11 @@ button.btn-info-cs:hover {
     border: none !important;
 }
 
-input {
+/* input {
     border-radius: 3px !important;
     border: 1px solid #777 !important;
     height: 40px !important;
-}
+} */
 
 div.dataTables_wrapper div.dataTables_filter label {
     margin-right: 0px !important;
@@ -176,14 +176,6 @@ div.dataTables_wrapper div.dataTables_length select {
 
 th,
 td,
-button,
-p,
-a,
-label {
-    font-size: 15px !important;
-}
-th,
-td,
 table {
     border: 0 !important;
 }
@@ -194,9 +186,10 @@ input[type="text"],
 input[type="file"],
 input[type="number"] {
     border: 1px solid rgb(211, 211, 211) !important;
-    height: 35px !important;
+    /* height: 35px !important; */
     color: #666 !important;
 }
+
 textarea {
     border: 1px solid rgb(211, 211, 211) !important;
     color: #666 !important;
@@ -346,7 +339,7 @@ body {
     top: -5px;
 }
 
-.form-control {
+.navbar-nav .input-group.form-control {
     width: 250px !important;
 }
 
@@ -383,7 +376,7 @@ body {
     background: #ffffff;
 }
 tr:nth-child(even) {
-    background-color: #f7faff;
+    background: #f7faff !important;
 }
 
 .modal-header {
@@ -391,14 +384,16 @@ tr:nth-child(even) {
     background: #f7faff;
 }
 
-.card-body table tbody tr:hover {
-    background: #eef0df;
+.card .card-body table tr:hover {
+    background: #eef0df !important;
 }
-.card-header {
-    padding: 18px;
-}
-
-a#view,#edit,#delete  {
+/* .card-header {
+    padding: 18px; 
+} */
+/* ***********button click csss**************8************* */
+a#view,
+#edit,
+#delete {
     box-shadow: 0.3px 1.5px 0.5px 0.6px #268b9b !important;
     border-radius: 5px !important;
     height: 28px !important;
@@ -407,34 +402,77 @@ a#view,#edit,#delete  {
     margin-bottom: 5px;
 }
 a#view {
-    box-shadow: 0.3px 1.5px 0.5px 0.6px rgba(10, 187, 117, .7) !important;
+    box-shadow: 0.3px 1.5px 0.5px 0.6px rgba(10, 187, 117, 0.7) !important;
 }
 a#view:hover {
     box-shadow: 0.3px 1.5px 2px 0.6px rgb(4, 125, 77) !important;
-    background:  rgba(10, 187, 117) !important;
+    background: rgba(10, 187, 117) !important;
     color: rgb(255, 255, 255) !important;
     font-weight: 800 !important;
 }
 a#edit {
-    box-shadow: 0.3px 1.5px 0.5px 0.6px rgba(247, 123, 11, .7)  !important;
+    box-shadow: 0.3px 1.5px 0.5px 0.6px rgba(247, 123, 11, 0.7) !important;
 }
 a#edit:hover {
     box-shadow: 0.3px 1.5px 2px 0.6px rgb(196, 105, 1) !important;
-    background:  rgba(247, 123, 11) !important;
+    background: rgba(247, 123, 11) !important;
     color: rgb(255, 255, 255) !important;
     font-weight: 800 !important;
 }
 
 a#delete {
-    box-shadow: 0.3px 1.5px 0.5px 0.6px rgba(239, 72, 106, .7)  !important;
+    box-shadow: 0.3px 1.5px 0.5px 0.6px rgba(239, 72, 106, 0.7) !important;
 }
 a#delete:hover {
     box-shadow: 0.3px 1.5px 2px 0.6px rgb(170, 36, 63) !important;
-    background:  rgba(239, 72, 106) !important;
+    background: rgba(239, 72, 106) !important;
     color: rgb(255, 255, 255) !important;
     font-weight: 800 !important;
 }
 
+a#edit:active,
+a#view:active,
+a#delete:active {
+    box-shadow: 0.1px 0.2px 2px 0px rgb(184, 184, 184) !important;
+    background: rgb(198, 172, 0) !important;
+    transform: translateY(2px);
+}
 
+/* ***********button click csss***************** */
+a.btn {
+    position: relative;
+    border-radius: 2em;
+    cursor: pointer;
+    user-select: none;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s; /* Safari */
+}
+a.btn:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 2em;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    box-shadow: 0 0 10px 20px rgb(233, 157, 70);
+}
+a.btn:active:after {
+    box-shadow: 0 0 0 0 rgb(214, 127, 27);
+    position: absolute;
+    border-radius: 2em;
+    left: 0;
+    top: 0;
+    opacity: 1;
+    transition: 0s;
+}
 
-
+.card-header h4 {
+    /* margin: auto !important; */
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+}
