@@ -4,10 +4,10 @@
     {{-- <li class="breadcrumb-item"><a href="#">Home</a></li>
 <li class="breadcrumb-item active">DataTables</li> --}}
 
-    {{-- <button type="button" class="btn btn-success swalDefaultSuccess">Success</button>
-<button type="button" class="btn btn-info swalDefaultInfo">Info</button>
-<button type="button" class="btn btn-success toastrDefaultSuccess">Success</button>
-<button type="button" class="btn btn-danger toastrDefaultError">Error</button> --}}
+    <button type="button" class="btn btn-success swalDefaultSuccess">Success</button>
+    <button type="button" class="btn btn-info swalDefaultInfo">Info</button>
+    <button type="button" class="btn btn-success toastrDefaultSuccess">Success</button>
+    <button type="button" class="btn btn-danger toastrDefaultError">Error</button>
 
     <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addModal">
         <i class="fa fa-plus"></i> Add Category
