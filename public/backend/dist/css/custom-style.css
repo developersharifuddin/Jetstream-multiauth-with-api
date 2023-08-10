@@ -237,8 +237,10 @@ body {
 }
 /* sidebar-color */
 .main-sidebar {
-    background: #055d77 !important;
+    background: #095970 !important;
     color: #ffffff !important;
+    opacity: 1 !important;
+    z-index: 999 !important;
 }
 
 [class*="sidebar-dark-"] .sidebar a {
