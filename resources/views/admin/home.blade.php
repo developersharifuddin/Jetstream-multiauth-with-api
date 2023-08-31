@@ -154,84 +154,251 @@
 <div class="row">
     <!-- Left col -->
     <section class="col-lg-7 connectedSortable">
-        <!-- solid sales graph -->
-        <div class="card bg-info">
+
+
+
+        <div class="card">
             <div class="card-header border-0">
-                <h3 class="card-title">
-                    <i class="fas fa-th mr-1"></i>
-                    Sales Graph
-                </h3>
+                <div class="d-flex justify-content-between">
+                    <h3 class="card-title">Online Store Visitors</h3>
+                    <a href="javascript:void(0);">View Report</a>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="d-flex">
+                    <p class="d-flex flex-column">
+                        <span class="text-bold text-lg">820</span>
+                        <span>Visitors Over Time</span>
+                    </p>
+                    <p class="ml-auto d-flex flex-column text-right">
+                        <span class="text-success">
+                            <i class="fas fa-arrow-up"></i> 12.5%
+                        </span>
+                        <span class="text-muted">Since last week</span>
+                    </p>
+                </div>
+                <!-- /.d-flex -->
+
+                <div class="position-relative mb-4">
+                    <canvas id="visitors-chart" height="200"></canvas>
+                </div>
+
+                <div class="d-flex flex-row justify-content-end">
+                    <span class="mr-2">
+                        <i class="fas fa-square text-primary"></i> This Week
+                    </span>
+
+                    <span>
+                        <i class="fas fa-square text-gray"></i> Last Week
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- /.card -->
+
+        <div class="card">
+            <div class="card-header border-0">
+                <h3 class="card-title">Products</h3>
+                <div class="card-tools">
+                    <a href="#" class="btn btn-tool btn-sm">
+                        <i class="fas fa-download"></i>
+                    </a>
+                    <a href="#" class="btn btn-tool btn-sm">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="card-body table-responsive p-0">
+                <table class="table table-striped table-valign-middle">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Sales</th>
+                            <th>More</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="dist/img/default-150x150.png" alt="Product 1" class="img-circle img-size-32 mr-2">
+                                Some Product
+                            </td>
+                            <td>$13 USD</td>
+                            <td>
+                                <small class="text-success mr-1">
+                                    <i class="fas fa-arrow-up"></i>
+                                    12%
+                                </small>
+                                12,000 Sold
+                            </td>
+                            <td>
+                                <a href="#" class="text-muted">
+                                    <i class="fas fa-search"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="dist/img/default-150x150.png" alt="Product 1" class="img-circle img-size-32 mr-2">
+                                Another Product
+                            </td>
+                            <td>$29 USD</td>
+                            <td>
+                                <small class="text-warning mr-1">
+                                    <i class="fas fa-arrow-down"></i>
+                                    0.5%
+                                </small>
+                                123,234 Sold
+                            </td>
+                            <td>
+                                <a href="#" class="text-muted">
+                                    <i class="fas fa-search"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="dist/img/default-150x150.png" alt="Product 1" class="img-circle img-size-32 mr-2">
+                                Amazing Product
+                            </td>
+                            <td>$1,230 USD</td>
+                            <td>
+                                <small class="text-danger mr-1">
+                                    <i class="fas fa-arrow-down"></i>
+                                    3%
+                                </small>
+                                198 Sold
+                            </td>
+                            <td>
+                                <a href="#" class="text-muted">
+                                    <i class="fas fa-search"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="dist/img/default-150x150.png" alt="Product 1" class="img-circle img-size-32 mr-2">
+                                Perfect Item
+                                <span class="badge bg-danger">NEW</span>
+                            </td>
+                            <td>$199 USD</td>
+                            <td>
+                                <small class="text-success mr-1">
+                                    <i class="fas fa-arrow-up"></i>
+                                    63%
+                                </small>
+                                87 Sold
+                            </td>
+                            <td>
+                                <a href="#" class="text-muted">
+                                    <i class="fas fa-search"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- /.card -->
+
+        <div class="card">
+            <div class="card-header border-transparent">
+                <h3 class="card-title">Latest Orders</h3>
 
                 <div class="card-tools">
-                    <button type="button" class="btn bg-info btn-sm" data-card-widget="collapse">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
                         <i class="fas fa-minus"></i>
                     </button>
-                    <button type="button" class="btn bg-info btn-sm" data-card-widget="remove">
+                    <button type="button" class="btn btn-tool" data-card-widget="remove">
                         <i class="fas fa-times"></i>
                     </button>
                 </div>
             </div>
-            <div class="card-body text-dark">
-                <canvas class="chart  text-dark" id="line-chart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+            <!-- /.card-header -->
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table m-0">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Item</th>
+                                <th>Status</th>
+                                <th>Popularity</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="pages/examples/invoice.html">OR9842</a></td>
+                                <td>Call of Duty IV</td>
+                                <td><span class="badge badge-success">Shipped</span></td>
+                                <td>
+                                    <div class="sparkbar" data-color="#00a65a" data-height="20">90,80,90,-70,61,-83,63</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><a href="pages/examples/invoice.html">OR1848</a></td>
+                                <td>Samsung Smart TV</td>
+                                <td><span class="badge badge-warning">Pending</span></td>
+                                <td>
+                                    <div class="sparkbar" data-color="#f39c12" data-height="20">90,80,-90,70,61,-83,68</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><a href="pages/examples/invoice.html">OR7429</a></td>
+                                <td>iPhone 6 Plus</td>
+                                <td><span class="badge badge-danger">Delivered</span></td>
+                                <td>
+                                    <div class="sparkbar" data-color="#f56954" data-height="20">90,-80,90,70,-61,83,63</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><a href="pages/examples/invoice.html">OR7429</a></td>
+                                <td>Samsung Smart TV</td>
+                                <td><span class="badge badge-info">Processing</span></td>
+                                <td>
+                                    <div class="sparkbar" data-color="#00c0ef" data-height="20">90,80,-90,70,-61,83,63</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><a href="pages/examples/invoice.html">OR1848</a></td>
+                                <td>Samsung Smart TV</td>
+                                <td><span class="badge badge-warning">Pending</span></td>
+                                <td>
+                                    <div class="sparkbar" data-color="#f39c12" data-height="20">90,80,-90,70,61,-83,68</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><a href="pages/examples/invoice.html">OR7429</a></td>
+                                <td>iPhone 6 Plus</td>
+                                <td><span class="badge badge-danger">Delivered</span></td>
+                                <td>
+                                    <div class="sparkbar" data-color="#f56954" data-height="20">90,-80,90,70,-61,83,63</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><a href="pages/examples/invoice.html">OR9842</a></td>
+                                <td>Call of Duty IV</td>
+                                <td><span class="badge badge-success">Shipped</span></td>
+                                <td>
+                                    <div class="sparkbar" data-color="#00a65a" data-height="20">90,80,90,-70,61,-83,63</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.table-responsive -->
             </div>
             <!-- /.card-body -->
-            <div class="card-footer bg-transparent">
-                <div class="row text-dark">
-                    <div class="col-4 text-center">
-                        <input type="text" class="knob" data-readonly="true" value="20" data-width="60" data-height="60" data-fgColor="#39CCCC">
-
-                        <div class=" text-dark">Mail-Orders</div>
-                    </div>
-                    <!-- ./col -->
-                    <div class="col-4 text-center">
-                        <input type="text" class="knob" data-readonly="true" value="50" data-width="60" data-height="60" data-fgColor="#39CCCC">
-
-                        <div class=" text-dark">Online</div>
-                    </div>
-                    <!-- ./col -->
-                    <div class="col-4 text-center">
-                        <input type="text" class="knob" data-readonly="true" value="30" data-width="60" data-height="60" data-fgColor="#39CCCC">
-
-                        <div class=" text-dark">In-Store</div>
-                    </div>
-                    <!-- ./col -->
-                </div>
-                <!-- /.row -->
+            <div class="card-footer clearfix">
+                <a href="javascript:void(0)" class="btn btn-sm btn-info float-left">Place New Order</a>
+                <a href="javascript:void(0)" class="btn btn-sm btn-secondary float-right">View All Orders</a>
             </div>
             <!-- /.card-footer -->
         </div>
-        <!-- /.card -->
-        <!-- Custom tabs (Charts with tabs)-->
-        <div class="card">
-            <div class="card-header">
-                <h3 class="card-title">
-                    <i class="fas fa-chart-pie mr-1"></i>
-                    Sales
-                </h3>
-                <div class="card-tools">
-                    <ul class="nav nav-pills ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#revenue-chart" data-toggle="tab">Area</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#sales-chart" data-toggle="tab">Donut</a>
-                        </li>
-                    </ul>
-                </div>
-            </div><!-- /.card-header -->
-            <div class="card-body">
-                <div class="tab-content p-0">
-                    <!-- Morris chart - Sales -->
-                    <div class="chart tab-pane active" id="revenue-chart" style="position: relative; height: 300px;">
-                        <canvas id="revenue-chart-canvas" height="300" style="height: 300px;"></canvas>
-                    </div>
-                    <div class="chart tab-pane" id="sales-chart" style="position: relative; height: 300px;">
-                        <canvas id="sales-chart-canvas" height="300" style="height: 300px;"></canvas>
-                    </div>
-                </div>
-            </div><!-- /.card-body -->
-        </div>
-        <!-- /.card -->
+
+
+
 
 
 
@@ -239,92 +406,164 @@
     <!-- /.Left col -->
     <!-- right col (We are only adding the ID to make the widgets sortable)-->
     <section class="col-lg-5 connectedSortable">
-
-        <!-- Map card -->
-        <div class="card bg-white">
+        <div class="card">
             <div class="card-header border-0">
-                <h3 class="card-title">
-                    <i class="fas fa-map-marker-alt mr-1"></i>
-                    Visitors
-                </h3>
-                <!-- card tools -->
+                <h3 class="card-title">Online Store Overview</h3>
                 <div class="card-tools">
-                    <button type="button" class="btn btn-primary btn-sm daterange" title="Date range">
-                        <i class="far fa-calendar-alt"></i>
-                    </button>
-                    <button type="button" class="btn btn-primary btn-sm" data-card-widget="collapse" title="Collapse">
-                        <i class="fas fa-minus"></i>
-                    </button>
+                    <a href="#" class="btn btn-sm btn-tool">
+                        <i class="fas fa-download"></i>
+                    </a>
+                    <a href="#" class="btn btn-sm btn-tool">
+                        <i class="fas fa-bars"></i>
+                    </a>
                 </div>
-                <!-- /.card-tools -->
             </div>
             <div class="card-body">
-                <div id="world-map" style="height: 250px; width: 100%;"></div>
-            </div>
-            <!-- /.card-body-->
-            <div class="card-footer bg-transparent">
-                <div class="row">
-                    <div class="col-4 text-center">
-                        <div id="sparkline-1"></div>
-                        <div class=" text-dark">Visitors</div>
-                    </div>
-                    <!-- ./col -->
-                    <div class="col-4 text-center">
-                        <div id="sparkline-2"></div>
-                        <div class=" text-dark">Online</div>
-                    </div>
-                    <!-- ./col -->
-                    <div class="col-4 text-center">
-                        <div id="sparkline-3"></div>
-                        <div class=" text-dark">Sales</div>
-                    </div>
-                    <!-- ./col -->
+                <div class="d-flex justify-content-between align-items-center border-bottom mb-3">
+                    <p class="text-success text-xl">
+                        <i class="ion ion-ios-refresh-empty"></i>
+                    </p>
+                    <p class="d-flex flex-column text-right">
+                        <span class="font-weight-bold">
+                            <i class="ion ion-android-arrow-up text-success"></i> 12%
+                        </span>
+                        <span class="text-muted">CONVERSION RATE</span>
+                    </p>
                 </div>
-                <!-- /.row -->
+                <!-- /.d-flex -->
+                <div class="d-flex justify-content-between align-items-center border-bottom mb-3">
+                    <p class="text-warning text-xl">
+                        <i class="ion ion-ios-cart-outline"></i>
+                    </p>
+                    <p class="d-flex flex-column text-right">
+                        <span class="font-weight-bold">
+                            <i class="ion ion-android-arrow-up text-warning"></i> 0.8%
+                        </span>
+                        <span class="text-muted">SALES RATE</span>
+                    </p>
+                </div>
+                <!-- /.d-flex -->
+                <div class="d-flex justify-content-between align-items-center mb-0">
+                    <p class="text-danger text-xl">
+                        <i class="ion ion-ios-people-outline"></i>
+                    </p>
+                    <p class="d-flex flex-column text-right">
+                        <span class="font-weight-bold">
+                            <i class="ion ion-android-arrow-down text-danger"></i> 1%
+                        </span>
+                        <span class="text-muted">REGISTRATION RATE</span>
+                    </p>
+                </div>
+                <!-- /.d-flex -->
+            </div>
+        </div>
+        <!-- /.col-md-6 -->
+
+        <!-- /.col-md-6 -->
+        <div class="card">
+            <div class="card-header border-0">
+                <div class="d-flex justify-content-between">
+                    <h3 class="card-title">Sales</h3>
+                    <a href="javascript:void(0);">View Report</a>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="d-flex">
+                    <p class="d-flex flex-column">
+                        <span class="text-bold text-lg">$18,230.00</span>
+                        <span>Sales Over Time</span>
+                    </p>
+                    <p class="ml-auto d-flex flex-column text-right">
+                        <span class="text-success">
+                            <i class="fas fa-arrow-up"></i> 33.1%
+                        </span>
+                        <span class="text-muted">Since last month</span>
+                    </p>
+                </div>
+                <!-- /.d-flex -->
+
+                <div class="position-relative mb-4">
+                    <canvas id="sales-chart" height="200"></canvas>
+                </div>
+
+                <div class="d-flex flex-row justify-content-end">
+                    <span class="mr-2">
+                        <i class="fas fa-square text-primary"></i> This year
+                    </span>
+
+                    <span>
+                        <i class="fas fa-square text-gray"></i> Last year
+                    </span>
+                </div>
             </div>
         </div>
         <!-- /.card -->
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Latest Members</h3>
 
-
-        <!-- Calendar -->
-        <div class="card bg-white">
-            <div class="card-header border-0">
-
-                <h3 class="card-title">
-                    <i class="far fa-calendar-alt"></i>
-                    Calendar
-                </h3>
-                <!-- tools card -->
                 <div class="card-tools">
-                    <!-- button with a dropdown -->
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-success btn-sm dropdown-toggle" data-toggle="dropdown" data-offset="-52">
-                            <i class="fas fa-bars"></i>
-                        </button>
-                        <div class="dropdown-menu" role="menu">
-                            <a href="#" class="dropdown-item">Add new event</a>
-                            <a href="#" class="dropdown-item">Clear events</a>
-                            <div class="dropdown-divider"></div>
-                            <a href="#" class="dropdown-item">View calendar</a>
-                        </div>
-                    </div>
-                    <button type="button" class="btn btn-success btn-sm" data-card-widget="collapse">
+                    <span class="badge badge-danger">8 New Members</span>
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
                         <i class="fas fa-minus"></i>
                     </button>
-                    <button type="button" class="btn btn-success btn-sm" data-card-widget="remove">
+                    <button type="button" class="btn btn-tool" data-card-widget="remove">
                         <i class="fas fa-times"></i>
                     </button>
                 </div>
-                <!-- /. tools -->
             </div>
             <!-- /.card-header -->
-            <div class="card-body pt-0">
-                <!--The calendar -->
-                <div id="calendar" style="width: 100%"></div>
+            <div class="card-body p-0">
+                <ul class="users-list clearfix">
+                    <li>
+                        <img src="dist/img/user1-128x128.jpg" alt="User Image">
+                        <a class="users-list-name" href="#">Alexander Pierce</a>
+                        <span class="users-list-date">Today</span>
+                    </li>
+                    <li>
+                        <img src="dist/img/user8-128x128.jpg" alt="User Image">
+                        <a class="users-list-name" href="#">Norman</a>
+                        <span class="users-list-date">Yesterday</span>
+                    </li>
+                    <li>
+                        <img src="dist/img/user7-128x128.jpg" alt="User Image">
+                        <a class="users-list-name" href="#">Jane</a>
+                        <span class="users-list-date">12 Jan</span>
+                    </li>
+                    <li>
+                        <img src="dist/img/user6-128x128.jpg" alt="User Image">
+                        <a class="users-list-name" href="#">John</a>
+                        <span class="users-list-date">12 Jan</span>
+                    </li>
+                    <li>
+                        <img src="dist/img/user2-160x160.jpg" alt="User Image">
+                        <a class="users-list-name" href="#">Alexander</a>
+                        <span class="users-list-date">13 Jan</span>
+                    </li>
+                    <li>
+                        <img src="dist/img/user5-128x128.jpg" alt="User Image">
+                        <a class="users-list-name" href="#">Sarah</a>
+                        <span class="users-list-date">14 Jan</span>
+                    </li>
+                    <li>
+                        <img src="dist/img/user4-128x128.jpg" alt="User Image">
+                        <a class="users-list-name" href="#">Nora</a>
+                        <span class="users-list-date">15 Jan</span>
+                    </li>
+                    <li>
+                        <img src="dist/img/user3-128x128.jpg" alt="User Image">
+                        <a class="users-list-name" href="#">Nadia</a>
+                        <span class="users-list-date">15 Jan</span>
+                    </li>
+                </ul>
+                <!-- /.users-list -->
             </div>
             <!-- /.card-body -->
+            <div class="card-footer text-center">
+                <a href="javascript:">View All Users</a>
+            </div>
+            <!-- /.card-footer -->
         </div>
-        <!-- /.card -->
     </section>
     <!-- right col -->
 </div>
