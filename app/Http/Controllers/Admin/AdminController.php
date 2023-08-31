@@ -20,7 +20,6 @@ class AdminController extends Controller
         } elseif (auth()->user()->role === 'employee') {
             return view('admin.home'); // View for employee dashboard
         }
-
         return redirect('/'); // Redirect to home or login page if the role is not recognized
     }
 

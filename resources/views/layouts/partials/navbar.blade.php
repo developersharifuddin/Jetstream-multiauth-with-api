@@ -1,9 +1,9 @@
   <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light py-2 border-none">
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light py-2 px-4 border-none">
       <!-- Left navbar links -->
       <ul class="navbar-nav py-1">
-          <li class="nav-item">
-              <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+          <li class="nav-item px-0">
+              <a class="nav-link px-0" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
           </li>
           <li class="nav-item d-none d-sm-inline-block">
               <a href="/" class="nav-link goweb" target="_blank"><i class="fa-solid fa-earth-americas"></i></a>
@@ -14,8 +14,8 @@
           <li class="nav-item">
               <div class="input-group bg-transparent">
                   <label class="input-group-text bg-transparent border-0" for="inputGroupSelect01">Store:</label>
-                  <select class="form-select form-control" id="inputGroupSelect01">
-                      <option selected value="1">Main Store/Dhaka Branch</option>
+                  <select class="form-select form-control" id="inputGroupSelect01" style="min-width:250px">
+                      <option selected value="1">Main Store</option>
                       <option value="2">Sub-Store</option>
                   </select>
               </div>
@@ -112,17 +112,18 @@
           </li>
           <li class="nav-item">
               <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-                  <i class="fas fa-expand-arrows-alt text-secoundary"></i>
+                  <i class="fa-solid fa-expand"></i>
               </a>
           </li>
           <li class="nav-item">
               <a class="nav-link" data-widget="control-sidebar" data-controlsidebar-slide="true" href="#" role="button">
-                  <i class="fas fa-th-large text-secoundary"></i>
+                  <i class="fa-solid fa-gear"></i>
               </a>
           </li>
 
-          <div class="btn-group mr-3">
-              <button type="button" class="btn border" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+
+          <div class="btn-group">
+              <button type="button" class="btn border" data-toggle="dropdown" data-display="static" aria-expanded="false">
                   @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
                   <img class="h-8 w-8 rounded-full object-cover" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
                   @else
@@ -136,7 +137,7 @@
                   </span>
                   @endif
               </button>
-              <ul class="dropdown-menu user">
+              <ul class="dropdown-menu user float-right">
                   <li>
 
                       <!-- Account Management -->
